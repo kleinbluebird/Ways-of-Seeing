@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    color: #fff;
+    background: #000;
+    font-family: 'Roboto' !important;
+}
+
+/*.circle_1{*/
+/*    position: absolute;*/
+/*    width: 40%;*/
+/*    height: 28vh;*/
+/*    top: 18%;*/
+/*    left: 5%;*/
+/*    display: block;*/
+/*    border: 5px solid white;*/
+/*    border-radius: 50% 50% 0 0/100% 100% 0 0 ;*/
+/*    border-bottom: none;*/
+/*    align-items: center;*/
+/*}*/
+
+/*.circle_2{*/
+/*    position: absolute;*/
+/*    width: 40%;*/
+/*    height: 28vh;*/
+/*    top: 18%;*/
+/*    right: 5%;*/
+/*    display: block;*/
+/*    border: 5px solid white;*/
+/*    border-radius: 50% 50% 0 0/100% 100% 0 0 ;*/
+/*    border-bottom: none;*/
+/*    align-items: center;*/
+/*}*/
+
+
+.buttonPosition {
+    position: absolute;
+    top: 88%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px 48px;
+}
+
+button {
+    position: relative;
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    background-color: #000000;
+    border: 4px solid rgba(255, 255, 255, 1);
+}
+button span {
+    color: #ffffff;
+    font-size: 2vh;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+}
+button:hover {
+    animation: rotate 0.7s ease-in-out both;
+}
+button:hover span {
+    animation: storm 0.7s ease-in-out both;
+    animation-delay: 0.06s;
+}
+
+
+.text_1 {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    font-size: 3vh;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    animation: rotating 30s linear infinite;
+}
+.text_1 span {
+    position: absolute;
+    transform-origin: bottom center;
+}
+
+.text_2 {
+    position: absolute;
+    top: 43%;
+    right: 50%;
+    text-transform: uppercase;
+    color: grey;
+    animation: rotating 20s linear infinite;
+}
+.text_2 span {
+    position: absolute;
+    transform-origin: bottom center;
+}
+
+@-moz-keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@-o-keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

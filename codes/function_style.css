@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+    font-family: sans-serif;
+    display: grid;
+    height: 100vh;
+    place-items: center;
+    background: black;
+    font-family: 'Roboto' !important;
+}
+
+.base-timer {
+    position: fixed;
+    width: 20vh;
+    height: 10vh;
+}
+
+.base-timer__svg {
+    height: 0px;
+    transform: scaleX(-1);
+}
+
+.base-timer__circle {
+    height: 0px;
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 5%;
+    stroke: grey;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 5%;
+    transform: rotate(90deg);
+    transform-origin: center;
+    fill-rule: nonzero;
+    stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+    color: rgb(218, 247, 166);
+}
+
+.base-timer__path-remaining.orange {
+    color: rgb(255, 195, 0);
+}
+
+.base-timer__path-remaining.red {
+    color: rgb(255, 87, 51);
+}
+
+.base-timer__label {
+    position: absolute;
+    width: 20vh;
+    height: 10vh;
+    top: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.2);
+    font-size: 6vh;
+}
+
+.time_pos {
+    position: fixed;
+    left: 65%;
+    bottom: 10.5vh;
+}
+
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    font-size: 100%;
+    font-weight: 400;
+    min-height: 100vh;
+}
+
+.flex__container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    -o-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: flex-start;
+    -moz-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    -o-justify-content: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 65%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.flex__container.flex--active {
+    z-index: 2;
+}
+
+.text__background {
+    position: absolute;
+    left: 66%;
+    bottom: 2.5vh;
+    color: rgba(255,255,255,0.1);
+    font-size: 6vh;
+}
+
+.flex__item {
+    height: 100vh;
+    color: #fff;
+    transition: transform 0.1s linear;
+}
+
+.flex__item--left {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    width: 100%;
+    transform-origin: left bottom;
+    transition: transform 0.1s linear 0.5s;
+    opacity: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.flex__item--right {
+    width: 35%;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.flex--preStart .flex__item--left,
+.flex--preStart .flex__item--right,
+.flex--active .flex__item--left,
+.flex--active .flex__item--right {
+    opacity: 1;
+}
+
+/* Slide1 */
+
+.flex--pikachu .flex__item--left {
+    background: #000000;
+}
+
+.flex--pikachu .flex__item--right {
+    background: #000000;
+}
+
+/* Slide2 */
+
+.flex--piplup .flex__item--left {
+    background: #000000;
+}
+
+.flex--piplup .flex__item--right {
+    background: #000000;
+}
+
+/* Slide3 */
+
+.flex--blaziken .flex__item--left {
+    background: #000000;
+}
+
+.flex--blaziken .flex__item--right {
+    background: #000000;
+}
+
+/* Slide4 */
+
+.flex--dialga .flex__item--left {
+    background: #000000;
+}
+
+.flex--dialga .flex__item--right {
+    background: #000000;
+}
+
+.flex__content {
+    margin-left: 5%;
+    width: 55%;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+    /*transition: transform 0.2s linear 0.2s, opacity 0.1s linear 0.2s;*/
+    transition: opacity 1s ease-in-out;
+}
+
+/* Animate-START point */
+
+.flex__container.animate--start .flex__content {
+    transform: translate3d(0,-200%,0);
+    opacity: 0;
+}
+
+.flex__container.animate--start .pokemon__img {
+    transform: translate3d(-200px,0,0);
+    opacity: 0;
+}
+
+/* Animate-END point */
+
+.flex__container.animate--end .flex__item--left {
+    transform: scaleY(0);
+}
+
+.flex__container.animate--end .flex__item--right {
+    transform: scaleX(0);
+}
+
+.flex__container.animate--end .flex__content {
+    transform: translate3d(0,200%,0);
+    opacity: 0;
+}
+
+.flex__container.animate--end .pokemon__img {
+    transform: translate3d(200px,0,0);
+    opacity: 0;
+}
+
+canvas {
+    display: block;
+    margin: auto; /* centers the canvas */
+    position: absolute;
+    width: 32%;
+    right: -13%;
+    top: 50%;
+    height: 800px;
+    transform: translate(-50%, -50%);
+}
